@@ -9,14 +9,14 @@ export class UserController {
     this.prisma = new PrismaClient();
   }
  
-  @Get("/")
+  @Get("")
   async getHello() {
     try {
       
       const allUsers = await this.prisma.user.findMany();
 
      
-      return allUsers;
+      return "hello";
     } catch (error) {
    
       console.error('Error fetching users:', error);
